@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – ONLY FANS</title>
+  <link rel="stylesheet" href="styles/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome Back</h1>
+    <form onsubmit="login(event)">
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function login(e) {
+      e.preventDefault();
+      // Mock login, accept anything
+      window.location.href = "home.html"; // or index.html
+    }
+  </script>
+</body>
+</html>

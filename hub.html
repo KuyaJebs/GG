@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ONLY FANS HUB</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><a href="home.html">ONLY FANS</a></div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="hub.html">Hub</a></li>
+      <li><a href="cart.html">Cart 🛒</a></li>
+      <li><a href="index.html">Log Out</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Hub Content Section -->
+  <div class="hub">
+    <h1>ONLY FANS HUB</h1>
+    
+    <!-- Filter Section -->
+    <div class="filter-options">
+      <h3>Filter by:</h3>
+      <!-- Filter by Rating -->
+      <label for="rating-filter">Rating:</label>
+      <select id="rating-filter">
+        <option value="all">All Ratings</option>
+        <option value="4.5">4.5+ Stars</option>
+        <option value="4">4+ Stars</option>
+        <option value="3">3+ Stars</option>
+      </select>
+      
+      <!-- Filter by Number of Purchases -->
+      <label for="purchases-filter">Number of Purchases:</label>
+      <select id="purchases-filter">
+        <option value="all">All Purchases</option>
+        <option value="50">50+ Purchases</option>
+        <option value="100">100+ Purchases</option>
+        <option value="200">200+ Purchases</option>
+      </select>
+      
+      <!-- Filter by Price -->
+      <label for="price-filter">Price:</label>
+      <select id="price-filter">
+        <option value="all">All Prices</option>
+        <option value="low-to-high">Low to High</option>
+        <option value="high-to-low">High to Low</option>
+      </select>
+    </div>
+
+    <!-- Fan Products Display -->
+    <div id="items-container" class="hub-content">
+      
+      <!-- Product 1: AeroBreeze SilentFlow™ -->
+      <div class="item-card product aero-breeze" data-rating="4.5" data-purchases="830" data-price="189.00">
+        <img src="images/hub/aerobreeze-main.jpg" alt="AeroBreeze SilentFlow™" />
+        <h3>AeroBreeze SilentFlow™ – Whisper-Quiet Cooling</h3>
+        <p>$189.00</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️☆</p>
+        <p>830 Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/aero-breeze.html'">View More</button>
+      </div>
+
+      <!-- Product 2: Humster Dempsey™ Ceiling Fan -->
+      <div class="item-card product humster-dempsey" data-rating="4.5" data-purchases="650" data-price="149.00">
+        <img src="images/hub/humster-dempsey-main.jpg" alt="Humster Dempsey™ Ceiling Fan" />
+        <h3>Humster Dempsey™ Ceiling Fan – Powerful & Silent</h3>
+        <p>$149.00</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️☆</p>
+        <p>650 Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/humster-dempsey.html'">View More</button>
+      </div>
+
+      <!-- Product 3: BreezeLite Mini™ -->
+      <div class="item-card product breezelite-mini" data-rating="4.5" data-purchases="1200" data-price="39.00">
+        <img src="images/hub/breezelite-main.jpg" alt="BreezeLite Mini™" />
+        <h3>BreezeLite Mini™ – Portable USB Fan</h3>
+        <p>$39.00</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️☆</p>
+        <p>1,200 Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/breezelite-mini.html'">View More</button>
+      </div>
+      
+      <!-- Product 4: ZephyrCool Vortex™ -->
+      <div class="item-card product zephyrcool-vortex" data-rating="4" data-purchases="540" data-price="89.00">
+        <img src="images/hub/zephyrcool-main.jpg" alt="ZephyrCool Vortex™" />
+        <h3>ZephyrCool Vortex™ – Compact Power Fan</h3>
+        <p>$89.00</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️☆</p>
+        <p>540 Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/zephyrcool-vortex.html'">View More</button>
+      </div>
+
+      <!-- Product 5: ClimaWall IntelliBreeze™ -->
+      <div class="item-card product climawall-intellibreeze" data-rating="5" data-purchases="680" data-price="199.00">
+        <img src="images/hub/climawall-main.jpg" alt="ClimaWall IntelliBreeze™" />
+        <h3>ClimaWall IntelliBreeze™ – Smart Wall Fan</h3>
+        <p>$199.00</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️⭐️</p>
+        <p>680 Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/climawall-intellibreeze.html'">View More</button>
+      </div>
+
+      <!-- Product 6: Blowzilla 9000™ -->
+      <div class="item-card product blowzilla-9000" data-rating="5" data-purchases="999" data-price="69.69">
+        <img src="images/hub/blowzilla-main.png" alt="Blowzilla 9000™" />
+        <h3>Blowzilla 9000™ – The Fan That Fears Nothing</h3>
+        <p>$69.69</p>
+        <p>Rating: 🔥 5 Stars</p>
+        <p>999+ Sold</p>
+        <button class="view-more" onclick="window.location.href='products/blowzilla-9000.html'">View More</button>
+      </div>
+
+      <!-- Product 7: Honeywell TurboForce Wall Fan -->
+      <div class="item-card product honeywell-turboforce" data-rating="4" data-purchases="930" data-price="34.99">
+        <img src="images/hub/honeywell-wallfan-main.jpg" alt="Honeywell TurboForce Wall Fan" />
+        <h3>Honeywell TurboForce Wall Fan – Powerful & Compact</h3>
+        <p>$34.99</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️☆</p>
+        <p>930 Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/honeywell-turboforce.html'">View More</button>
+      </div>
+
+      <!-- Product 8: Lasko Oscillating Tower Fan -->
+      <div class="item-card product lasko-oscillating" data-rating="4.5" data-purchases="5200" data-price="74.99">
+        <img src="images/hub/lasko-main.jpg" alt="Lasko Oscillating Tower Fan" />
+        <h3>Lasko Oscillating Tower Fan – 42" with Remote, Ionizer & Timer</h3>
+        <p>$74.99</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️☆</p>
+        <p>5,200+ Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/lasko-oscillating.html'">View More</button>
+      </div>
+
+      <!-- Product 9: SmartFan Pro™ -->
+      <div class="item-card product smartfan-pro" data-rating="5" data-purchases="1200" data-price="649.00">
+        <img src="images/hub/smartfan-main.jpg" alt="SmartFan Pro™" />
+        <h3>SmartFan Pro™ – Elevate Your Work Place</h3>
+        <p>$649.00</p>
+        <p>Rating: ⭐️⭐️⭐️⭐️⭐️</p>
+        <p>1.2k Verified Orders</p>
+        <button class="view-more" onclick="window.location.href='products/smartfan-pro.html'">View More</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Only Fans. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Filtering -->
+  <script>
+    document.getElementById('rating-filter').addEventListener('change', function() {
+      const ratingValue = this.value;
+      const allItems = document.querySelectorAll('.item-card');
+
+      allItems.forEach(item => {
+        const itemRating = parseFloat(item.getAttribute('data-rating'));
+        if (ratingValue === 'all' || (ratingValue === '4.5' && itemRating >= 4.5) || (ratingValue === '4' && itemRating >= 4) || (ratingValue === '3' && itemRating >= 3)) {
+          item.style.display = 'block'; // Show item
+        } else {
+          item.style.display = 'none'; // Hide item
+        }
+      });
+    });
+
+    document.getElementById('purchases-filter').addEventListener('change', function() {
+      const purchasesValue = this.value;
+      const allItems = document.querySelectorAll('.item-card');
+
+      allItems.forEach(item => {
+        const itemPurchases = parseInt(item.getAttribute('data-purchases'));
+        if (purchasesValue === 'all' || (purchasesValue === '50' && itemPurchases >= 50) || (purchasesValue === '100' && itemPurchases >= 100) || (purchasesValue === '200' && itemPurchases >= 200)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+
+    document.getElementById('price-filter').addEventListener('change', function() {
+      const priceValue = this.value;
+      const allItems = Array.from(document.querySelectorAll('.item-card'));
+
+      if (priceValue === 'low-to-high') {
+        allItems.sort((a, b) => parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price')));
+      } else if (priceValue === 'high-to-low') {
+        allItems.sort((a, b) => parseFloat(b.getAttribute('data-price')) - parseFloat(a.getAttribute('data-price')));
+      }
+
+      const container = document.getElementById('items-container');
+      container.innerHTML = '';
+      allItems.forEach(item => container.appendChild(item)); // Reorder the items
+    });
+  </script>
+
+</body>
+</html>
