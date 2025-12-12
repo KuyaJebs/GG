@@ -1,0 +1,244 @@
+/* === home.css === */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Typography & Background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #f5f5f5;
+  background-color: #111;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Hero Image: full-width, fixed height */
+.hero-image-placeholder img {
+  width: 100%;
+  height: 500px;            /* adjust height as needed */
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero Text overlay */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #FFD700;           /* gold */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: #FFD700;
+  color: #111;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #E6B800;
+}
+
+/* Features Section */
+.features {
+  background-color: #111;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: #FFD700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #ccc;
+}
+
+/* Featured Products Section */
+.featured {
+  background-color: #111;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.featured-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.featured-items .card {
+  background-color: #1a1a1a;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease;
+}
+
+.featured-items .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Equal-size banner images */
+.featured-items .card .image-placeholder img {
+  width: 100%;
+  height: 200px;            /* same height for all */
+  object-fit: cover;
+  display: block;
+}
+
+.featured-items .card h3 {
+  color: #FFD700;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.featured-items .card p {
+  color: #ccc;
+  padding: 0 20px 20px;
+  font-size: 1rem;
+}
+
+.featured-items .card .btn {
+  background-color: #FFD700;
+  color: #111;
+  padding: 10px 20px;
+  margin: 0 auto 20px;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.featured-items .card .btn:hover {
+  background-color: #E6B800;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #111;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial {
+  background-color: #1a1a1a;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  color: #ccc;
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  font-size: 1rem;
+}

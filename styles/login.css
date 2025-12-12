@@ -1,0 +1,64 @@
+/* Full-screen background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: url('../images/login-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Centered black glassy login container */
+  .login-container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 1rem; /* ensures equal margins on both sides for small screens */
+  }
+  
+  .login-container h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: gold;
+  }
+  
+  /* Inputs */
+  .login-container input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Button */
+  .login-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: gold;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .login-container button:active {
+    background-color: #aa8800;
+  }
+  
