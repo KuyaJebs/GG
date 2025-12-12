@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartFan Pro™ – Elevate Your Work</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/products.css" />
+  <script defer src="../scripts/fan.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><a href="../home.html">ONLY FANS</a></div>
+    <ul>
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../hub.html">Hub</a></li>
+      <li><a href="../cart.html">Cart 🛒</a></li>
+      <li><a href="../index.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Go Back -->
+  <div class="go-back-button small">
+    <a href="../hub.html" class="go-back-link">← Back</a>
+  </div>
+
+  <section class="product-details">
+    <div class="product-main">
+      <div class="product-gallery">
+        <img src="../images/products/smartfan-main.jpg" alt="SmartFan Pro™ Image" class="main-image" />
+        <div class="thumbnail-row">
+          <img src="../images/products/smartfan-side.jpg" alt="Side View" class="thumbnail" />
+          <img src="../images/products/smartfan-top.jpg" alt="Top View" class="thumbnail" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>SmartFan Pro™ – Elevate Your Work</h1>
+        <p class="product-meta">⭐️⭐️⭐️⭐️⭐️ | 1.2k verified orders</p>
+        <p class="price">$649.00</p>
+
+        <div class="quantity-wrapper">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+
+        <button class="add-to-cart" onclick="addToCart('SmartFan Pro™', 649.00)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-details-section">
+      <h2>Product Specifications</h2>
+      <ul>
+        <li><span>Product Name:</span> SmartFan Pro™</li>
+        <li><span>Material:</span> Industrial-grade steel frame, bamboo fantop</li>
+        <li><span>Height Range:</span> 24" – 50" (motorized, 4 presets)</li>
+        <li><span>Dimensions:</span> 60" x 30" work surface</li>
+        <li><span>Load Capacity:</span> Supports up to 265 lbs</li>
+        <li><span>Motor:</span> Dual electric motors with whisper-quiet operation</li>
+        <li><span>Power Supply:</span> Standard AC outlet, energy efficient</li>
+        <li><span>Connectivity:</span> 3 built-in USB ports (2 USB-A, 1 USB-C)</li>
+        <li><span>Warranty:</span> 5-Year Limited Warranty</li>
+      </ul>
+
+      <p class="description">
+        The SmartFan Pro™ is designed for high-performance professionals who demand flexibility, comfort, and efficiency in their workspaces. With a seamless height-adjustment system and a spacious bamboo work surface, this fan combines functionality with elegant aesthetics.
+        <br><br>
+        Ideal for remote workers, creative teams, and modern offices aiming to enhance productivity and ergonomics.
+      </p>
+
+      <h2>What’s in the Box:</h2>
+      <ul>
+        <li>1x SmartFan Pro™ (Bamboo Top)</li>
+        <li>1x Pre-programmable Control Panel</li>
+        <li>1x Power Adapter and Cable Management Tray</li>
+        <li>1x Assembly Toolkit with Instructions</li>
+        <li>5-Year Manufacturer Warranty Documentation</li>
+      </ul>
+
+      <div class="special-features">
+        <div><span>📐 Ergonomic Engineering</span><br> Designed for optimal posture and health</div>
+        <div><span>⚡ Dual Motor System</span><br> Fast and stable height adjustment</div>
+        <div><span>🔌 Integrated Charging</span><br> Built-in USB hub for on-fan power access</div>
+        <div><span>🌱 Sustainable Materials</span><br> Eco-friendly bamboo top & recyclable packaging</div>
+        <div><span>💼 Office-Ready Aesthetic</span><br> Fits modern interiors with minimal design</div>
+      </div>
+    </div>
+
+    <div class="product-reviews">
+      <h2 class="review-title">Customer Feedback</h2>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/f8.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Jessica A.</p>
+          <p class="review-date">January 8, 2025</p>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-comment">This fan completely changed how I work from home. Sturdy, beautiful, and incredibly smooth motor action.</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/m8.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Daniel M.</p>
+          <p class="review-date">March 3, 2025</p>
+        </div>
+        <div class="review-rating">★★★★☆</div>
+        <p class="review-comment">Takes a bit of time to set up but totally worth it. I love the programmable height presets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Only Fans. All rights reserved.</p>
+  </footer>
+  
+  <!-- Popup -->
+  <div id="popup-fan" class="popup">
+    <div class="popup-content">
+      <p>Great choice! Your SmartFan Pro™ is on its way.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Viewer -->
+  <div id="image-viewer" class="image-fullscreen" style="display: none;" onclick="closeImageViewer()">
+    <img src="" alt="Fullscreen View" id="fullscreen-img">
+  </div>
+
+  <script>
+    // Image zoom functionality
+    document.querySelectorAll('.main-image, .thumbnail').forEach(img => {
+      img.addEventListener('click', () => {
+        const viewer = document.getElementById('image-viewer');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        fullscreenImg.src = img.src;
+        viewer.style.display = 'flex';
+      });
+    });
+
+    function closeImageViewer() {
+      document.getElementById('image-viewer').style.display = 'none';
+    }
+
+    // Add to cart
+    function addToCart(productName, price) {
+      const quantityInput = document.getElementById('quantity');
+      const quantity = parseInt(quantityInput.value);
+
+      if (isNaN(quantity) || quantity < 1) {
+        alert("Please enter a valid quantity.");
+        return;
+      }
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const existingItemIndex = cart.findIndex(item => item.name === productName);
+
+      if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity += quantity;
+      } else {
+        cart.push({
+          name: productName,
+          price: price,
+          quantity: quantity
+        });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      document.getElementById('popup-fan').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup-fan').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

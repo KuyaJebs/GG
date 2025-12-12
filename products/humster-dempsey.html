@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Humster Dempsey™ Ceiling Fan – Powerful & Silent</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/products.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="../home.html">ONLY FANS</a></div>
+    <ul>
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../hub.html">Hub</a></li>
+      <li><a href="../cart.html">Cart 🛒</a></li>
+      <li><a href="../index.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <div class="go-back-button small">
+    <a href="../hub.html" class="go-back-link">← Back</a>
+  </div>
+
+  <section class="product-details">
+    <div class="product-main">
+      <div class="product-gallery">
+        <img src="../images/products/humster-dempsey-main.jpg" alt="Humster Dempsey Ceiling Fan" class="main-image" />
+        <div class="thumbnail-row">
+          <img src="../images/products/humster-dempsey-side.jpg" alt="Side View" class="thumbnail" />
+          <img src="../images/products/humster-dempsey-room.jpg" alt="Room View" class="thumbnail" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>Humster Dempsey™ Ceiling Fan – Powerful & Silent</h1>
+        <p class="product-meta">⭐️⭐️⭐️⭐️☆ | 650 verified orders</p>
+        <p class="price">$149.00</p>
+
+        <div class="quantity-wrapper">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+
+        <button class="add-to-cart" onclick="addToCart('Humster Dempsey™ Ceiling Fan', 149.00)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-details-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li><span>Design:</span> Sleek, modern with a minimalist finish</li>
+        <li><span>Noise:</span> Operates at < 15 dB</li>
+        <li><span>Smart Control:</span> Works with Alexa & Google Assistant</li>
+        <li><span>Adjustable Speed:</span> 3 different fan speed settings</li>
+        <li><span>Timer Mode:</span> Set it to turn off automatically</li>
+      </ul>
+
+      <p class="description">
+        The Humster Dempsey™ Ceiling Fan delivers silent yet powerful air circulation to ensure comfort in every room. Perfect for living spaces, offices, and bedrooms, it operates quietly while maintaining strong airflow.
+      </p>
+
+      <h2>What’s in the Box</h2>
+      <ul>
+        <li>1x Humster Dempsey™ Ceiling Fan</li>
+        <li>1x Remote Control (USB-C Rechargeable)</li>
+        <li>1x User Manual & Warranty Card</li>
+      </ul>
+
+      <!-- Special Features Section -->
+      <div class="special-features">
+        <div><span>💨 TurboForce Technology</span><br> Delivers powerful air movement</div>
+        <div><span>🔇 Quiet Motor</span><br> Operates silently for night use</div>
+        <div><span>🔄 Pivoting Head</span><br> Adjustable air direction</div>
+        <div><span>🔌 Energy Efficient</span><br> Uses less energy without compromising power</div>
+      </div>
+    </div>
+
+    <div class="product-reviews">
+      <h2 class="review-title">Customer Feedback</h2>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/f6.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Olivia Mason</p>
+          <p class="review-date">January 22, 2025</p>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-comment">The Humster Dempsey™ Ceiling Fan is quiet and powerful! It's perfect for our bedroom, and I barely notice it running at night.</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/m6.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Henry Lin</p>
+          <p class="review-date">March 5, 2025</p>
+        </div>
+        <div class="review-rating">★★★★☆</div>
+        <p class="review-comment">Great fan, sleek design. Only wish it came with a wall mount option for easier installation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Only Fans. All rights reserved.</p>
+  </footer>
+  
+  <!-- Popup -->
+  <div id="popup-humsterdempsey" class="popup">
+    <div class="popup-content">
+      <p>Great choice! Your Humster Dempsey™ Ceiling Fan is on its way.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Viewer -->
+  <div id="image-viewer" class="image-fullscreen" style="display: none;" onclick="closeImageViewer()">
+    <img src="" alt="Fullscreen View" id="fullscreen-img">
+  </div>
+
+  <script>
+    // Image zoom functionality
+    document.querySelectorAll('.main-image, .thumbnail').forEach(img => {
+      img.addEventListener('click', () => {
+        const viewer = document.getElementById('image-viewer');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        fullscreenImg.src = img.src;
+        viewer.style.display = 'flex';
+      });
+    });
+  
+    function closeImageViewer() {
+      document.getElementById('image-viewer').style.display = 'none';
+    }
+  
+    // Add to cart and store in localStorage
+    function addToCart(productName, price) {
+      const quantityInput = document.getElementById('quantity');
+      const quantity = parseInt(quantityInput.value);
+  
+      if (isNaN(quantity) || quantity < 1) {
+        alert("Please enter a valid quantity.");
+        return;
+      }
+  
+      // Retrieve cart from localStorage or initialize it
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+      const existingItemIndex = cart.findIndex(item => item.name === productName);
+  
+      if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity += quantity;
+      } else {
+        cart.push({
+          name: productName,
+          price: price,
+          quantity: quantity
+        });
+      }
+  
+      // Save back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+  
+      // Show confirmation popup
+      document.getElementById('popup-humsterdempsey').style.display = 'block';
+    }
+  
+    function closePopup() {
+      document.getElementById('popup-humsterdempsey').style.display = 'none';
+    }
+  
+    // Optional: Debug view in console
+    function updateCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      console.log(cart);
+    }
+  </script>
+  
+</body>
+</html>

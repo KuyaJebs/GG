@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Honeywell TurboForce Wall Fan – Powerful & Compact</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/products.css" />
+  <script defer src="../scripts/fan.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><a href="../home.html">ONLY FANS</a></div>
+    <ul>
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../hub.html">Hub</a></li>
+      <li><a href="../cart.html">Cart 🛒</a></li>
+      <li><a href="../index.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Go Back -->
+  <div class="go-back-button small">
+    <a href="../hub.html" class="go-back-link">← Back</a>
+  </div>
+
+  <section class="product-details">
+    <div class="product-main">
+      <div class="product-gallery">
+        <img src="../images/products/honeywell-wallfan-main.jpg" alt="Honeywell Wall Fan Main" class="main-image" />
+        <div class="thumbnail-row">
+          <img src="../images/products/honeywell-wallfan-side.jpg" alt="Side View" class="thumbnail" />
+          <img src="../images/products/honeywell-wallfan-mount.jpg" alt="Wall Mount View" class="thumbnail" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>Honeywell TurboForce Wall Fan – Powerful & Compact</h1>
+        <p class="product-meta">⭐️⭐️⭐️⭐️ | 930 verified orders</p>
+        <p class="price">$34.99</p>
+
+        <div class="quantity-wrapper">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+
+        <button class="add-to-cart" onclick="addToCart('Honeywell TurboForce Wall Fan', 34.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-details-section">
+      <h2>Product Specifications</h2>
+      <ul>
+        <li><span>Model:</span> HT-900</li>
+        <li><span>Mount Type:</span> Wall-mountable or tabletop</li>
+        <li><span>Speeds:</span> 3 fan speeds</li>
+        <li><span>Head:</span> 90-degree pivoting head</li>
+        <li><span>Motor:</span> TurboForce power for intense airflow</li>
+        <li><span>Noise:</span> Quiet operation</li>
+        <li><span>Color:</span> Black</li>
+        <li><span>Energy Use:</span> Energy efficient design</li>
+      </ul>
+
+      <p class="description">
+        The Honeywell TurboForce Wall Fan is a compact powerhouse. Whether mounted or placed on a desk, it’s built to deliver strong airflow without noise. Designed for bedrooms, kitchens, or any compact workspace.
+        <br><br>
+        With 3 speeds and a 90-degree pivot, stay cool from any angle.
+      </p>
+
+      <h2>What’s in the Box:</h2>
+      <ul>
+        <li>1x Honeywell TurboForce Fan</li>
+        <li>1x Wall Mount Kit</li>
+        <li>1x User Manual</li>
+      </ul>
+
+      <div class="special-features">
+        <div><span>💨 TurboForce Technology</span><br> Delivers powerful air movement</div>
+        <div><span>🔇 Quiet Motor</span><br> Operates silently for night use</div>
+        <div><span>🔄 Pivoting Head</span><br> Adjustable air direction</div>
+        <div><span>🔌 Energy Efficient</span><br> Uses less energy without compromising power</div>
+      </div>
+    </div>
+
+    <div class="product-reviews">
+      <h2 class="review-title">Customer Feedback</h2>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/f5.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Sara K.</p>
+          <p class="review-date">February 25, 2025</p>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-comment">This fan is perfect for my small kitchen! It's so quiet but pushes a lot of air, even on the lowest setting.</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/m5.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Mark L.</p>
+          <p class="review-date">March 10, 2025</p>
+        </div>
+        <div class="review-rating">★★★★☆</div>
+        <p class="review-comment">Great fan, but I wish the cord was longer for wall-mounting. Otherwise, very happy with its performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Only Fans. All rights reserved.</p>
+  </footer>
+  
+  <!-- Popup -->
+  <div id="popup-honeywell" class="popup">
+    <div class="popup-content">
+      <p>Great choice! Your Honeywell TurboForce Wall Fan is on its way.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Viewer -->
+  <div id="image-viewer" class="image-fullscreen" style="display: none;" onclick="closeImageViewer()">
+    <img src="" alt="Fullscreen View" id="fullscreen-img">
+  </div>
+
+  <script>
+    // Image zoom functionality
+    document.querySelectorAll('.main-image, .thumbnail').forEach(img => {
+      img.addEventListener('click', () => {
+        const viewer = document.getElementById('image-viewer');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        fullscreenImg.src = img.src;
+        viewer.style.display = 'flex';
+      });
+    });
+
+    function closeImageViewer() {
+      document.getElementById('image-viewer').style.display = 'none';
+    }
+
+    // Add to cart and store in localStorage
+    function addToCart(productName, price) {
+      const quantityInput = document.getElementById('quantity');
+      const quantity = parseInt(quantityInput.value);
+
+      if (isNaN(quantity) || quantity < 1) {
+        alert("Please enter a valid quantity.");
+        return;
+      }
+
+      // Retrieve cart from localStorage or initialize it
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const existingItemIndex = cart.findIndex(item => item.name === productName);
+
+      if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity += quantity;
+      } else {
+        cart.push({
+          name: productName,
+          price: price,
+          quantity: quantity
+        });
+      }
+
+      // Save back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Show confirmation popup
+      document.getElementById('popup-honeywell').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup-honeywell').style.display = 'none';
+    }
+
+    // Optional: Debug view in console
+    function updateCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      console.log(cart);
+    }
+  </script>
+
+</body>
+</html>

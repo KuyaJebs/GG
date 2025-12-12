@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blowzilla 9000™ – The Fan That Fears Nothing</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/products.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="../home.html">ONLY FANS</a></div>
+    <ul>
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../hub.html">Hub</a></li>
+      <li><a href="../cart.html">Cart 🛒</a></li>
+      <li><a href="../index.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <div class="go-back-button small">
+    <a href="../hub.html" class="go-back-link">← Back before you’re blown away</a>
+  </div>
+
+  <section class="product-details">
+    <div class="product-main">
+      <div class="product-gallery">
+        <img src="../images/products/blowzilla-main.png" alt="Blowzilla 9000 Fan" class="main-image" />
+        <div class="thumbnail-row">
+          <img src="../images/products/blowzilla-front.png" alt="Front View" class="thumbnail" />
+          <img src="../images/products/blowzilla-action.png" alt="In Action" class="thumbnail" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>Blowzilla 9000™ – The Fan That Fears Nothing</h1>
+        <p class="product-meta">🔥 999+ sold to brave customers | 🔊 As loud as your neighbor’s car alarm</p>
+        <p class="price">$69.69</p>
+
+        <div class="quantity-wrapper">
+          <label for="quantity">How many dare you own?</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+
+        <button class="add-to-cart" onclick="addToCart('Blowzilla 9000™', 69.69)">Add to Cart (at your own risk)</button>
+      </div>
+    </div>
+
+    <div class="product-details-section">
+      <h2>What Makes Blowzilla Legendary?</h2>
+      <ul>
+        <li><span>🌪️ Wind Power:</span> Can dry your laundry, style your hair, and strip wallpaper—all at once</li>
+        <li><span>🧠 Smart(ish) Modes:</span> “Breeze,” “Tornado,” and “Who Hurt You?”</li>
+        <li><span>⚙️ Noise Level:</span> Loud enough to drown out your thoughts</li>
+        <li><span>💥 Construction:</span> Made of 40% steel, 60% spite</li>
+        <li><span>🚫 Safety:</span> No children, pets, or loose clothing allowed within 2 meters</li>
+      </ul>
+
+      <p class="description">
+        The Blowzilla 9000™ isn’t just a fan. It’s a lifestyle choice. A declaration. A warning to your entire household that you take air circulation seriously. Created in a basement somewhere by a man named Greg who once yelled at the wind, this beast of a blower will make sure you never sweat again... mostly out of fear.
+      </p>
+
+      <h2>What’s in the Box?</h2>
+      <ul>
+        <li>1x Blowzilla 9000™ (arrives already judging you)</li>
+        <li>1x Bolt-tightening wrench (you’ll need it monthly)</li>
+        <li>1x Waiver form (legally required)</li>
+        <li>1x User manual (written entirely in sarcasm)</li>
+      </ul>
+
+      <div class="special-features">
+        <div><span>⚡ Industrial Fan Rage Mode</span><br> We’re not sure why this setting exists. Use responsibly.</div>
+        <div><span>🧊 Cool Level: MAXIMUM</span><br> Physically and metaphorically cool</div>
+        <div><span>🦿 Doubles as a leg workout</span><br> Because it’ll push you back if you stand too close</div>
+        <div><span>💀 Comes with regrets</span><br> But the good kind</div>
+      </div>
+    </div>
+
+    <div class="product-reviews">
+      <h2 class="review-title">Customer Reactions (Unfiltered)</h2>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/f2.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Linda M.</p>
+          <p class="review-date">April 1, 2025</p>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-comment">It blew the cat off the couch. 10/10 would terrify again.</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/m2.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Randy "No Ragrets"</p>
+          <p class="review-date">March 15, 2025</p>
+        </div>
+        <div class="review-rating">★★★★☆</div>
+        <p class="review-comment">It’s loud, scary, and my electric bill cried. Love it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Only Fans. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup -->
+  <div id="popup-blowzilla" class="popup">
+    <div class="popup-content">
+      <p>Blowzilla 9000™ has entered your cart. Prepare yourself.</p>
+      <button onclick="closePopup()">Close (if you dare)</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Viewer -->
+  <div id="image-viewer" class="image-fullscreen" style="display: none;" onclick="closeImageViewer()">
+    <img src="" alt="Fullscreen View" id="fullscreen-img">
+  </div>
+
+  <script>
+    document.querySelectorAll('.main-image, .thumbnail').forEach(img => {
+      img.addEventListener('click', () => {
+        const viewer = document.getElementById('image-viewer');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        fullscreenImg.src = img.src;
+        viewer.style.display = 'flex';
+      });
+    });
+
+    function closeImageViewer() {
+      document.getElementById('image-viewer').style.display = 'none';
+    }
+
+    function addToCart(productName, price) {
+      const quantityInput = document.getElementById('quantity');
+      const quantity = parseInt(quantityInput.value);
+
+      if (isNaN(quantity) || quantity < 1) {
+        alert("Please enter a valid quantity. Or don’t. Blowzilla doesn’t care.");
+        return;
+      }
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const existingItemIndex = cart.findIndex(item => item.name === productName);
+
+      if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity += quantity;
+      } else {
+        cart.push({
+          name: productName,
+          price: price,
+          quantity: quantity
+        });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      document.getElementById('popup-blowzilla').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup-blowzilla').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

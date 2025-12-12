@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AeroBreeze SilentFlow™ – Whisper-Quiet Cooling</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/products.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="../home.html">ONLY FANS</a></div>
+    <ul>
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../hub.html">Hub</a></li>
+      <li><a href="../cart.html">Cart 🛒</a></li>
+      <li><a href="../index.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <div class="go-back-button small">
+    <a href="../hub.html" class="go-back-link">← Back</a>
+  </div>
+
+  <section class="product-details">
+    <div class="product-main">
+      <div class="product-gallery">
+        <img src="../images/products/aerobreeze-main.jpg" alt="AeroBreeze SilentFlow Fan" class="main-image" />
+        <div class="thumbnail-row">
+          <img src="../images/products/aerobreeze-side.jpg" alt="Side View" class="thumbnail" />
+          <img src="../images/products/aerobreeze-room.jpg" alt="Room View" class="thumbnail" />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>AeroBreeze SilentFlow™ – Whisper-Quiet Cooling</h1>
+        <p class="product-meta">⭐️⭐️⭐️⭐️☆ | 830 verified orders</p>
+        <p class="price">$189.00</p>
+
+        <div class="quantity-wrapper">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+
+        <button class="add-to-cart" onclick="addToCart('AeroBreeze SilentFlow™', 189.00)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-details-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li><span>Design:</span> Bladeless, safe, and elegant</li>
+        <li><span>Noise:</span> Operates at < 20 dB</li>
+        <li><span>Smart Control:</span> Wi-Fi, Alexa, Google Assistant</li>
+        <li><span>Timer Mode:</span> Adjustable sleep settings</li>
+        <li><span>Oscillation:</span> 120° wide-angle</li>
+        <li><span>Adjustable Height:</span> Desk and stand mode</li>
+      </ul>
+
+      <p class="description">
+        AeroBreeze SilentFlow™ brings you comfort with silence. It’s bladeless, modern, and voice-activated — perfect for homes, bedrooms, and workspaces. Adjust its height and breeze without leaving your couch.
+      </p>
+
+      <h2>What’s in the Box</h2>
+      <ul>
+        <li>1x AeroBreeze SilentFlow™ Fan</li>
+        <li>1x Remote Control (USB-C Rechargeable)</li>
+        <li>1x User Manual & Warranty Card</li>
+      </ul>
+
+      <!-- Special Features Section -->
+      <div class="special-features">
+        <div><span>💨 TurboFlow Technology</span><br> Delivers strong, consistent airflow</div>
+        <div><span>🔇 Ultra-Quiet Operation</span><br> Perfect for sleep and study environments</div>
+        <div><span>🌐 Smart App Control</span><br> Control your fan remotely with your smartphone</div>
+        <div><span>💡 LED Display</span><br> Clear indicators for easy operation</div>
+      </div>
+    </div>
+
+    <div class="product-reviews">
+      <h2 class="review-title">Customer Feedback</h2>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/f1.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Emma Jackson</p>
+          <p class="review-date">March 3, 2025</p>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-comment">This fan is amazing! So quiet and cools my room perfectly, even during the hot summer nights.</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <img src="../images/review/m1.jpg" alt="Profile Pic" class="review-pfp" />
+          <p class="review-name">Lucas Ryan</p>
+          <p class="review-date">April 14, 2025</p>
+        </div>
+        <div class="review-rating">★★★★☆</div>
+        <p class="review-comment">The fan is great, but I wish it had more speed settings. It's otherwise perfect for my office.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Only Fans. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup -->
+  <div id="popup-aerobreeze" class="popup">
+    <div class="popup-content">
+      <p>Great choice! Your AeroBreeze SilentFlow™ is on its way.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Viewer -->
+  <div id="image-viewer" class="image-fullscreen" style="display: none;" onclick="closeImageViewer()">
+    <img src="" alt="Fullscreen View" id="fullscreen-img">
+  </div>
+
+  <script>
+    // Image zoom functionality
+    document.querySelectorAll('.main-image, .thumbnail').forEach(img => {
+      img.addEventListener('click', () => {
+        const viewer = document.getElementById('image-viewer');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        fullscreenImg.src = img.src;
+        viewer.style.display = 'flex';
+      });
+    });
+
+    function closeImageViewer() {
+      document.getElementById('image-viewer').style.display = 'none';
+    }
+
+    // Add to cart and store in localStorage
+    function addToCart(productName, price) {
+      const quantityInput = document.getElementById('quantity');
+      const quantity = parseInt(quantityInput.value);
+
+      if (isNaN(quantity) || quantity < 1) {
+        alert("Please enter a valid quantity.");
+        return;
+      }
+
+      // Retrieve cart from localStorage or initialize it
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const existingItemIndex = cart.findIndex(item => item.name === productName);
+
+      if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity += quantity;
+      } else {
+        cart.push({
+          name: productName,
+          price: price,
+          quantity: quantity
+        });
+      }
+
+      // Save back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Show confirmation popup
+      document.getElementById('popup-aerobreeze').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup-aerobreeze').style.display = 'none';
+    }
+
+    // Optional: Debug view in console
+    function updateCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      console.log(cart);
+    }
+  </script>
+
+</body>
+</html>
